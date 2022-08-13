@@ -10,7 +10,7 @@ export default function CardProduct({titulo, precio, id, categoria, subtitulo, i
         <div id={`productoN${id}`}>
             <div className={styles.titulo}>{titulo}</div>
             <div className={styles.subtitulo}>{subtitulo}</div>
-            <div > {img && <Image src={img} alt="foto del producto" width={100} height={100} />}</div>
+            <div > {img && <Image src={img} alt="foto del producto" width={200} height={200} />}</div>
             <div className={styles.categoria}>{categoria}</div>
             <div className={styles.precio}>${precio}</div>
             <button onClick={addToCart}>Añadir al Carrito</button>
