@@ -36,6 +36,8 @@ export default function Productos({products}) {
                                 precio={product.precio}
                                 categoria={product.Categoría}
                                 subtitulo={product.subtitulo}
+                                imgHeight={product.imgHeight}
+                                imgWidth={product.imgWidth}
                             />)}
                     )}
                 </div>

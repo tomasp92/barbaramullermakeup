@@ -1,7 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import Image from 'next/image';
 
-export default function CardProduct({titulo, precio, id, categoria, subtitulo, img}) {
+export default function CardProduct({titulo, precio, id, categoria, subtitulo, img, imgHeight , imgWidth}) {
     console.log("🚀 ~ img", img)
     const addToCart = () => {
         console.log("🚀 ~ addToCart", id)
@@ -10,7 +10,7 @@ export default function CardProduct({titulo, precio, id, categoria, subtitulo, i
         <div id={`productoN${id}`}>
             <div className={styles.titulo}>{titulo}</div>
             <div className={styles.subtitulo}>{subtitulo}</div>
-            <div > {img && <Image src={img} alt="foto del producto" width={200} height={200} />}</div>
+            <div className={styles.imgContainer}> {img && <Image className={styles.imageProduct} src={img} alt="foto del producto" width={imgWidth ? imgWidth : 170 } height={imgHeight ? imgHeight : 170} />}</div>
             <div className={styles.categoria}>{categoria}</div>
             <div className={styles.precio}>${precio}</div>
             <button onClick={addToCart}>Añadir al Carrito</button>
